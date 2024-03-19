@@ -6,10 +6,11 @@
 :root {
     --primary-color: #1f2937;
     --secondary-color: #111827;
+    --header-bg: #e71b24;
 }
 
 header {
-    background-color: aquamarine;
+    background-color: var(--header-bg);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 6em;
     text-align: center;
@@ -17,13 +18,10 @@ header {
     color: var(--secondary-color);
 }
 
-.hidden {
-    display: none;
-}
 
 button {
     color: aliceblue;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: large;
     margin-top: 1em;
     background-color: var(--primary-color);
@@ -36,7 +34,7 @@ button {
 }
 
 button:hover {
-    background-color: #111827;
+    background-color: #162034;
 }
 
 nav {
@@ -47,4 +45,34 @@ nav {
 
 body {
     background-color: var(--primary-color);
+}
+
+.card {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    color: white;
+    height: 80vh;
+    width: 50vw;
+    margin: 10vh;
+    padding: 5vh;
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 2em;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.inactive {
+    background-color: var(--secondary-color);
+}
+
+.hidden {
+    display: none;
 }
