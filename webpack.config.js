@@ -6,10 +6,12 @@ module.exports = {
     devtool: 'inline-source-map',
     entry: {
         index: './src/index.js',
+        home: './src/home.js',
+        menu: './src/menu.js',
+        about: './src/about.js'
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Output Management',
             template: './src/index.html'
         }),
     ],
@@ -18,4 +20,15 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ],
+            },
+        ],
+    }
 };
