@@ -29,6 +29,12 @@ module.exports = {
                     'css-loader'
                 ],
             },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+                    'file-loader'
+                ]
+            }
         ],
     }
 };
